@@ -9,6 +9,7 @@
   list-style: none;
   box-sizing: border-box;
 }
+
 :root {
   --color-primary: #6c63ff;
   --color-success: #00bf8e;
@@ -39,9 +40,11 @@ body {
   width: var(--container-width-1g);
   margin: 0 auto;
 }
+
 section {
   padding: 6rem 0;
 }
+
 section h2 {
   text-align: center;
   margin-bottom: 4rem;
@@ -54,6 +57,7 @@ h1 h2 h3 h4 h5 {
 h1 {
   font-size: 2.4 rem;
 }
+
 h2 {
   font-size: 2rem;
 }
@@ -61,9 +65,11 @@ h2 {
 h3 {
   font-size: 1.6rem;
 }
+
 h4 {
   font-size: 1.3rem;
 }
+
 a {
   color: var(--color-white);
 }
@@ -89,10 +95,12 @@ img {
   color: var(--color-white);
   border-color: var(--color-white);
 }
+
 .btn-primary {
   background: var(--color-danger);
   color: var(--color-white);
 }
+
 /* nav section starts here */
 
 nav {
@@ -117,6 +125,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 nav button {
   display: none;
 }
@@ -126,6 +135,7 @@ nav button {
   align-items: center;
   gap: 4rem;
 }
+
 .nav__menu a {
   font-size: 0.9rem;
   transition: all 400ms ease;
@@ -157,13 +167,14 @@ header {
 .header_left p {
   margin: 1rem 0 2.4rem;
 }
+
 /* header section ends here */
 
 /* category section starts here */
 
 .categories {
   background: var(--color-bg1);
-  height: 29rem;
+  height: 32rem;
 }
 
 .categories h1 {
@@ -175,6 +186,7 @@ header {
   display: grid;
   grid-template-columns: 40% 60%;
 }
+
 .categories_left {
   margin: 2rem;
 }
@@ -218,12 +230,15 @@ header {
 .category:nth-child(2) .category_icon {
   background: var(--color-danger);
 }
+
 .category:nth-child(3) .category_icon {
   background: var(--color-success);
 }
+
 .category:nth-child(4) .category_icon {
   background: var(--color-warning);
 }
+
 .category:nth-child(6) .category_icon {
   background: var(--color-success);
 }
@@ -372,4 +387,182 @@ footer {
   gap: 5rem;
 }
 
+.footer_container > div h4 {
+  margin-bottom: 1.2rem;
+}
+
+.footer_1p {
+  margin: 0 0 2rem;
+}
+
+footer ul li {
+  margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.footer_copyright {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--color-bg2);
+}
+
 /* footer section ends here */
+
+/* media querie section */
+
+@media (max-width: 1024px) {
+  body {
+    .container {
+      width: var(--container-width-md);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    /* nav bar section  */
+
+    nav button {
+      display: inline-block;
+      background: transparent;
+      font-size: 1.8rem;
+      color: var(--color-white);
+      cursor: pointer;
+    }
+
+    nav buttonclose-menu-btn {
+      display: none;
+    }
+
+    .nav__menu {
+      position: relative;
+      top: 5rem;
+      right: 5%;
+      height: fit-content;
+      width: 18rem;
+      flex-direction: column;
+      gap: 0;
+      display: none;
+    }
+
+    .nav__menu li {
+      width: 100%;
+      height: 5.8rem;
+      animation: animateNavitems 400ms liner forward;
+      transform-origin: top right;
+    }
+
+    .nav__menu li:nth-child(2) {
+      animation-delay: 200ms;
+    }
+
+    .nav__menu li:nth-child(3) {
+      animation-delay: 400ms;
+    }
+
+    .nav__menu li:nth-child(4) {
+      animation-delay: 600ms;
+    }
+
+    @keyframes animateNavitems {
+      0% {
+        transform: rotateZ(-90deg) rotataX(90drg) scale(0.1);
+      }
+
+      100% {
+        transform: rotateZ(0) rotataX(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .nav__menu li a {
+      background: var(--color-primary);
+      box-shadow: -4rem 6rem rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: grid;
+    }
+
+    .nav__menu li a:hover {
+      background: var(--color-bg2);
+      color: var(--color-white);
+    }
+
+    header {
+      height: 52vh;
+      margin-bottom: 4rem;
+    }
+
+    .header__container {
+      gap: 0;
+      padding-bottom: 3rem;
+    }
+
+    .categories {
+      height: auto;
+    }
+
+    .categories_container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .categories_left {
+      margin-right: 0;
+    }
+
+    .courses {
+      margin-top: 0;
+    }
+
+    .course_contaner {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .faqs_containe {
+      grid-template-columns: 1fr;
+    }
+
+    .faq {
+      padding: 1rem;
+    }
+
+    .footer_container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .footer_1 p {
+      margin: 1rem auto;
+    }
+
+    .footer_socials {
+      justify-content: center;
+    }
+  }
+  /* media queire section */
+}
